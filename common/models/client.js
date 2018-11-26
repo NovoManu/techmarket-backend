@@ -3,7 +3,9 @@
 module.exports = function(Client) {
   /**
    * Login an existing user or create a new one
-   * @param {object} credentials Credentials for login or sighup
+   * @param {string} name (not required)
+   * @param {string} email (required)
+   * @param {string} phone (not required)
    * @param {Function(Error, object)} callback
    */
 
