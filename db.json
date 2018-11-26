@@ -18,7 +18,7 @@
     "RoleMapping": {},
     "Role": {},
     "Client": {
-      "1": "{\"first_name\":\"Manu\",\"email\":\"ex@gmail.com\",\"id\":1}"
+      "1": "{\"phone\":\"123\",\"email\":\"ex@mail.ru\",\"address\":\"\",\"ref_link\":\"ex@mail.ru:9940\",\"refered_by\":\"\",\"password\":\"$2a$10$JM3ueH6VFF0niPUD9zhfceLeRIH6gXVXXvZLvraFosxhUTK.x8JWi\",\"name\":\"Manu\",\"id\":1}"
     }
   }
 }

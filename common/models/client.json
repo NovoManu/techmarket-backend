@@ -1,6 +1,6 @@
 {
   "name": "Client",
-  "base": "PersistedModel",
+  "base": "User",
   "idInjection": true,
   "options": {
     "validateUpsert": true
@@ -31,6 +31,57 @@
   },
   "validations": [],
   "relations": {},
-  "acls": [],
-  "methods": {}
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "loginOrCreate"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "findOne"
+    }
+  ],
+  "methods": {
+    "loginOrCreate": {
+      "accepts": [
+        {
+          "arg": "name",
+          "type": "string",
+          "required": false,
+          "description": "Username"
+        },
+        {
+          "arg": "email",
+          "type": "string",
+          "required": true,
+          "description": "User email"
+        },
+        {
+          "arg": "phone",
+          "type": "string",
+          "required": false,
+          "description": "User phone"
+        }
+      ],
+      "returns": [
+        {
+          "arg": "result",
+          "type": "object",
+          "root": true,
+          "description": "The result of login or create an user"
+        }
+      ],
+      "description": "Login an existing user or create a new one",
+      "http": [
+        {
+          "path": "/login-client",
+          "verb": "post"
+        }
+      ]
+    }
+  }
 }
