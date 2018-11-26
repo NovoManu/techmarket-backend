@@ -31,7 +31,11 @@
     }
   },
   "session": {},
-  "auth": {},
+  "auth": {
+    "./auth.js": {
+      "paths": "${restApiRoot}"
+    }
+  },
   "parse": {},
   "routes": {
     "loopback#rest": {
