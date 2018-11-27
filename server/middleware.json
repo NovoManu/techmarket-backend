@@ -33,7 +33,7 @@
   "session": {},
   "auth": {
     "./auth.js": {
-      "paths": "${restApiRoot}"
+      "paths": "${restApiRoot}/login-client/qwe"
     }
   },
   "parse": {},

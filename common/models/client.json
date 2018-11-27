@@ -48,31 +48,17 @@
   "methods": {
     "loginOrCreate": {
       "accepts": [
-        {
-          "arg": "name",
-          "type": "string",
-          "required": false,
-          "description": "Username"
-        },
-        {
-          "arg": "email",
-          "type": "string",
-          "required": true,
-          "description": "User email"
-        },
-        {
-          "arg": "phone",
-          "type": "string",
-          "required": false,
-          "description": "User phone"
-        }
+        {"arg": "data", "type": "object", "http": {"source": "req"}},
+        {"arg": "name", "type": "string"},
+        {"arg": "email", "type": "string"},
+        {"arg": "phone", "type": "string"}
       ],
       "returns": [
         {
           "arg": "result",
           "type": "object",
           "root": true,
-          "description": "The result of login or create an user"
+          "description": "The result of login or create an user. Returns: id(token), ttl, created, userId"
         }
       ],
       "description": "Login an existing user or create a new one",
