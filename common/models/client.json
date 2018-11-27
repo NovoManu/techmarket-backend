@@ -48,10 +48,25 @@
   "methods": {
     "loginOrCreate": {
       "accepts": [
-        {"arg": "data", "type": "object", "http": {"source": "req"}},
-        {"arg": "name", "type": "string"},
-        {"arg": "email", "type": "string"},
-        {"arg": "phone", "type": "string"}
+        {
+          "arg": "data",
+          "type": "object",
+          "http": {
+            "source": "req"
+          }
+        },
+        {
+          "arg": "name",
+          "type": "string"
+        },
+        {
+          "arg": "email",
+          "type": "string"
+        },
+        {
+          "arg": "phone",
+          "type": "string"
+        }
       ],
       "returns": [
         {

@@ -1,0 +1,62 @@
+{
+  "name": "Vehicle",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "user_id": {
+      "type": "number",
+      "required": true
+    },
+    "vehicle_type_id": {
+      "type": "number",
+      "required": true
+    },
+    "vehicle_subtype_id": {
+      "type": "number",
+      "required": true
+    },
+    "vehicle_model_id": {
+      "type": "number",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "characteristics": {
+      "type": "string"
+    },
+    "document_links": {
+      "type": [
+        "string"
+      ]
+    },
+    "picture_links": {
+      "type": [
+        "string"
+      ]
+    },
+    "min_rent_time": {
+      "type": "number"
+    },
+    "price_per_hour": {
+      "type": "number"
+    },
+    "pay_type": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

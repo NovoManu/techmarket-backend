@@ -15,7 +15,9 @@ function loginClient(Model, {email}, callback) {
 module.exports = function(Client) {
   /**
    * Login an existing user or create a new one
-   * @param {string} body (not required)
+   * @param {string} name (not required)
+   * @param {string} email (not required)
+   * @param {string} phone (not required)
    * @param {Function(Error, object)} callback
    */
 

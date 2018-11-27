@@ -39,5 +39,21 @@
   "Client": {
     "dataSource": "db",
     "public": true
+  },
+  "Vehicle": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Vehicle_Type": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Vehicle_Subtype": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Vehicle_Model": {
+    "dataSource": "db",
+    "public": true
   }
 }
