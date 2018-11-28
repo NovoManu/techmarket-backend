@@ -5,7 +5,8 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Client": 5
+    "Client": 5,
+    "Vehicle": 2
   },
   "models": {
     "User": {
@@ -22,6 +23,9 @@
     "Role": {},
     "Client": {
       "4": "{\"phone\":\"241234\",\"email\":\"test@gmail.com\",\"address\":\"\",\"ref_link\":\"test@gmail.com-5579\",\"refered_by\":\"\",\"password\":\"$2a$10$JMtv1dpHU0B8IYB.yJ9fZ.KRHUBD/jvLsAfl0g5TqSNI9zMOrrqjS\",\"sub\":\"auth0|5bf8d93481125149615b0ad6\",\"name\":\"Manu\",\"id\":4}"
+    },
+    "Vehicle": {
+      "1": "{\"user_id\":1,\"vehicle_type_id\":1,\"vehicle_subtype_id\":1,\"vehicle_model_id\":1,\"title\":\"Title\",\"min_rent_time\":1,\"price_per_hour\":1,\"id\":1}"
     }
   }
 }
