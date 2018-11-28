@@ -1,11 +1,11 @@
 {
   "ids": {
     "User": 2,
-    "AccessToken": 8,
+    "AccessToken": 10,
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Client": 5,
+    "Client": 2,
     "Vehicle": 2
   },
   "models": {
@@ -14,15 +14,13 @@
     },
     "AccessToken": {
       "x5wcE0RQ0GXcGmqeZ83CS0vn5QGnvTRyQHiNwrgJwmqSReS6TTs6Xbq1E43vFicL": "{\"id\":\"x5wcE0RQ0GXcGmqeZ83CS0vn5QGnvTRyQHiNwrgJwmqSReS6TTs6Xbq1E43vFicL\",\"ttl\":1209600,\"created\":\"2018-11-27T20:18:04.899Z\",\"userId\":4}",
-      "go6msELrMEG0aymG6qWxjDk2eLHnwHpzWIGv5uyncK2silFzeaniMWf08zMetP77": "{\"id\":\"go6msELrMEG0aymG6qWxjDk2eLHnwHpzWIGv5uyncK2silFzeaniMWf08zMetP77\",\"ttl\":1209600,\"created\":\"2018-11-27T20:19:04.293Z\",\"userId\":4}",
-      "I8r9ljuWNAZF6kdt23HFOOTfaNkQUFytSLsxPk0o8UX8oXjIGagt0uLAkjwBE0Fw": "{\"id\":\"I8r9ljuWNAZF6kdt23HFOOTfaNkQUFytSLsxPk0o8UX8oXjIGagt0uLAkjwBE0Fw\",\"ttl\":1209600,\"created\":\"2018-11-27T20:19:06.581Z\",\"userId\":4}",
-      "zhPE9hvtkby1rEG2ezYNkqpxnWPZpfNctvloil2pMm6rup5zbXcWYNkSJLWIa292": "{\"id\":\"zhPE9hvtkby1rEG2ezYNkqpxnWPZpfNctvloil2pMm6rup5zbXcWYNkSJLWIa292\",\"ttl\":1209600,\"created\":\"2018-11-27T20:19:59.898Z\",\"userId\":4}"
+      "e2qsCXcFRRlXb1dS0D6gZhxjYseYgKNDBROvGr6bjolAB2KcXTFjqkTA0h38pQwj": "{\"id\":\"e2qsCXcFRRlXb1dS0D6gZhxjYseYgKNDBROvGr6bjolAB2KcXTFjqkTA0h38pQwj\",\"ttl\":1209600,\"created\":\"2018-11-28T17:28:20.352Z\",\"userId\":1}"
     },
     "ACL": {},
     "RoleMapping": {},
     "Role": {},
     "Client": {
-      "4": "{\"phone\":\"241234\",\"email\":\"test@gmail.com\",\"address\":\"\",\"ref_link\":\"test@gmail.com-5579\",\"refered_by\":\"\",\"password\":\"$2a$10$JMtv1dpHU0B8IYB.yJ9fZ.KRHUBD/jvLsAfl0g5TqSNI9zMOrrqjS\",\"sub\":\"auth0|5bf8d93481125149615b0ad6\",\"name\":\"Manu\",\"id\":4}"
+      "1": "{\"phone\":\"\",\"email\":\"tech@test.com\",\"address\":\"\",\"ref_link\":\"-9750\",\"refered_by\":\"\",\"password\":\"$2a$10$R5NRTj9bElYLd6Voy9ZP5ey5jZRiCikoJ0kcn7wDYE7MBBC6Zy7wG\",\"sub\":\"auth0|5bf8d93481125149615b0ad6\",\"name\":\"techmarket\",\"avatar_link\":\"\",\"id\":1}"
     },
     "Vehicle": {
       "1": "{\"user_id\":1,\"vehicle_type_id\":1,\"vehicle_subtype_id\":1,\"vehicle_model_id\":1,\"title\":\"Title\",\"min_rent_time\":1,\"price_per_hour\":1,\"id\":1}"

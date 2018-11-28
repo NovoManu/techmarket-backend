@@ -38,8 +38,8 @@ module.exports = function(Client) {
         const refNumber = `${email}-${randomNumber}`;
         const params = {
           sub,
-          name,
-          email,
+          name: name || decodedToken.nickname,
+          email: email || decodedToken.email,
           password,
           phone,
           avatar_link: '',
