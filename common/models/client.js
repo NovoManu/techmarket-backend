@@ -42,6 +42,7 @@ module.exports = function(Client) {
           email,
           password,
           phone,
+          avatar_link: '',
           address: '',
           'ref_link': refNumber,
           'refered_by': '',
