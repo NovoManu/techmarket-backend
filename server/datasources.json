@@ -7,13 +7,10 @@
   "mysql": {
     "name": "mysql",
     "connector": "mysql",
-    "pool": true,
-    "connectionLimit": 100,
-    "waitForConnections": true,
-    "host": "eu-cdbr-west-02.cleardb.net",
+    "host": "localhost",
     "port": 3306,
-    "database": "heroku_fb056fe29a370dd",
-    "password": "07f5a07c",
-    "user": "b7503a038e0290"
+    "database": "techmarket",
+    "password": "wjeu57ie",
+    "user": "root"
   }
 }
