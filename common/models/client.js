@@ -8,7 +8,7 @@ function loginClient(Model, {email}, callback) {
     email,
     password,
   }, 'client', (err, res) => {
-    callback(null, res);
+    return callback(null, res);
   });
 }
 
@@ -30,7 +30,6 @@ module.exports = function(Client) {
     Client.find({
       where: {sub},
     }, (err, res) => {
-      if (err) callback(err);
       if (res && res.length) {
         loginClient(Client, {email: res[0]['email']}, callback);
       } else {
@@ -42,14 +41,15 @@ module.exports = function(Client) {
           email: email || decodedToken.email,
           password,
           phone,
+          // eslint-disable-next-line
           avatar_link: '',
           address: '',
           'ref_link': refNumber,
           'refered_by': '',
         };
         Client.create(params, (err, result) => {
-          if (err) callback(err);
-          if (res) loginClient(Client, {email: result.email}, callback);
+          // if (result) callback(err);
+          if (result) loginClient(Client, {email: result.email}, callback);
         });
       }
     });

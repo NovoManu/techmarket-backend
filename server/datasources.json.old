@@ -7,10 +7,10 @@
   "mysql": {
     "name": "mysql",
     "connector": "mysql",
-    "host": "eu-cdbr-west-02.cleardb.net",
+    "host": "localhost",
     "port": 3306,
     "database": "techmarket",
-    "password": "bf076bac",
-    "user": "b5818ec2e2e7ad"
+    "password": "rootPermiss234",
+    "user": "root"
   }
 }

@@ -14,46 +14,46 @@
     ]
   },
   "User": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "Client": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": true
   },
   "Vehicle": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": true
   },
   "Vehicle_Type": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": true
   },
   "Vehicle_Subtype": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": true
   },
   "Vehicle_Model": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": true
   }
 }
