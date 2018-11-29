@@ -27,6 +27,9 @@
     },
     "refered_by": {
       "type": "string"
+    },
+    "role": {
+      "type": "string"
     }
   },
   "validations": [],
