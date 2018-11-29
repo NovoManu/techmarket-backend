@@ -44,11 +44,11 @@ module.exports = function(Client) {
           password,
           phone,
           // eslint-disable-next-line
-          avatar_link: '',
-          address: '',
+          avatar_link: null,
+          address: null,
           'ref_link': refNumber,
-          'refered_by': '',
-          role: '',
+          'refered_by': null,
+          role: null,
         };
         Client.create(params, (err, result) => {
           if (err) callback(err);
