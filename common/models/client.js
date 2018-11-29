@@ -8,6 +8,7 @@ function loginClient(Model, {email}, callback) {
     email,
     password,
   }, 'client', (err, res) => {
+    if (err) return callback(err);
     return callback(null, res);
   });
 }
@@ -33,8 +34,9 @@ module.exports = function(Client) {
       if (res && res.length) {
         loginClient(Client, {email: res[0]['email']}, callback);
       } else {
-        const randomNumber = Math.floor(Math.random() * (9999 - 1000) + 1000);
-        const refNumber = `${email}-${randomNumber}`;
+        let randomNumber = Math.floor(Math.random() *
+          (999999 - 100000) + 100000);
+        const refNumber = sub.split('|')[1] + randomNumber;
         const params = {
           sub,
           name: name || decodedToken.nickname,
@@ -46,9 +48,10 @@ module.exports = function(Client) {
           address: '',
           'ref_link': refNumber,
           'refered_by': '',
+          role: '',
         };
         Client.create(params, (err, result) => {
-          // if (result) callback(err);
+          if (err) callback(err);
           if (result) loginClient(Client, {email: result.email}, callback);
         });
       }

@@ -6,10 +6,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "first_name": {
-      "type": "string"
-    },
-    "last_name": {
+    "name": {
       "type": "string"
     },
     "phone": {
@@ -26,6 +23,9 @@
       "type": "string"
     },
     "refered_by": {
+      "type": "string"
+    },
+    "role": {
       "type": "string"
     }
   },
