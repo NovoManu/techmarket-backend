@@ -3,9 +3,9 @@ const jwtDecode = require('jwt-decode');
 // Note: we are adding the same password for all user because we have auth0
 const password = 'techMarketuserLogin45372';
 
-function loginClient(Model, {email}, callback) {
+function loginClient(Model, {username}, callback) {
   Model.login({
-    email,
+    username,
     password,
   }, 'client', (err, res) => {
     if (err) return callback(err);
@@ -13,6 +13,7 @@ function loginClient(Model, {email}, callback) {
       if (error) return callback(error);
       response['access_token'] = res.id;
       response['id'] = res.userId;
+      delete response.username;
       return callback(null, response);
     });
   });
@@ -32,19 +33,19 @@ module.exports = function(Client) {
   ) => {
     const token = req.query['access_token'];
     const decodedToken = jwtDecode(token);
-    const sub = decodedToken.sub;
+    const username = decodedToken.sub;
     Client.find({
-      where: {sub},
+      where: {username},
     }, (err, res) => {
       if (res && res.length) {
-        loginClient(Client, {email: res[0]['email']}, callback);
+        loginClient(Client, {username}, callback);
       } else {
         let randomNumber = Math.floor(Math.random() *
           (999999 - 100000) + 100000);
-        const refNumber = sub.split('|')[1] + randomNumber;
+        const refNumber = username.split('|')[1] + randomNumber;
         const params = {
-          sub,
-          name: name || decodedToken.nickname,
+          username,
+          name: name || decodedToken.nickname || decodedToken.name,
           email: email || decodedToken.email,
           password,
           phone,
@@ -57,7 +58,7 @@ module.exports = function(Client) {
         };
         Client.create(params, (err, result) => {
           if (err) callback(err);
-          if (result) loginClient(Client, {email: result.email}, callback);
+          if (result) loginClient(Client, {username}, callback);
         });
       }
     });

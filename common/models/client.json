@@ -9,6 +9,10 @@
     "name": {
       "type": "string"
     },
+    "username": {
+      "type": "string",
+      "required": true
+    },
     "phone": {
       "type": "string"
     },
@@ -16,8 +20,7 @@
       "type": "string"
     },
     "email": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "address": {
       "type": "string"
@@ -33,6 +36,7 @@
     }
   },
   "validations": [],
+  "hidden": ["username"],
   "relations": {},
   "acls": [
     {
