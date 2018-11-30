@@ -9,7 +9,10 @@ function loginClient(Model, {email}, callback) {
     password,
   }, 'client', (err, res) => {
     if (err) return callback(err);
-    return callback(null, res);
+    Model.findById(res.userId, (error, response) => {
+      if (error) return callback(error);
+      return callback(null, response);
+    });
   });
 }
 
