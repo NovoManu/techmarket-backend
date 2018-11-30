@@ -12,6 +12,9 @@
     "phone": {
       "type": "string"
     },
+    "avatar_link": {
+      "type": "string"
+    },
     "email": {
       "type": "string",
       "required": true
