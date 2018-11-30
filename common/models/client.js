@@ -11,6 +11,8 @@ function loginClient(Model, {email}, callback) {
     if (err) return callback(err);
     Model.findById(res.userId, (error, response) => {
       if (error) return callback(error);
+      response['access_token'] = res.id;
+      response['id'] = res.userId;
       return callback(null, response);
     });
   });
