@@ -49,8 +49,8 @@ module.exports = function(Client) {
           email: email || decodedToken.email,
           password,
           phone,
-          // eslint-disable-next-line
-          avatar_link: null,
+          'avatar_link': null,
+          'birth_date': null,
           address: null,
           'ref_link': refNumber,
           'refered_by': null,
