@@ -13,6 +13,7 @@ function loginClient(Model, {username}, callback) {
       if (error) return callback(error);
       response['access_token'] = res.id;
       response['id'] = res.userId;
+      response['created_at'] = res.created;
       delete response.username;
       return callback(null, response);
     });
