@@ -55,7 +55,7 @@ module.exports = function(Client) {
           address: null,
           'ref_link': refNumber,
           'refered_by': null,
-          role: null,
+          role: 'customer',
         };
         Client.create(params, (err, result) => {
           if (err) callback(err);
