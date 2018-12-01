@@ -36,6 +36,10 @@
     },
     "role": {
       "type": "string"
+    },
+    "registered_at": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],

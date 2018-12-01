@@ -13,7 +13,6 @@ function loginClient(Model, {username}, callback) {
       if (error) return callback(error);
       response['access_token'] = res.id;
       response['id'] = res.userId;
-      response['created_at'] = res.created;
       delete response.username;
       return callback(null, response);
     });
@@ -56,6 +55,7 @@ module.exports = function(Client) {
           'ref_link': refNumber,
           'refered_by': null,
           role: 'customer',
+          'registered_at': new Date(),
         };
         Client.create(params, (err, result) => {
           if (err) callback(err);
