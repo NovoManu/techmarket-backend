@@ -39,7 +39,6 @@
     }
   },
   "validations": [],
-  "hidden": ["username"],
   "relations": {},
   "acls": [
     {
